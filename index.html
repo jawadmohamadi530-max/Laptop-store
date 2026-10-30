@@ -6,13 +6,21 @@
     <title>NOVA LAPTOP</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/png" href="images/logo/my-Logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- headre -->
     <header class="header">
       <nav class="nav">
         <div class="contenar nav__contenar">
           <div class="nav-text">
+            <span class="bars-icon">
+              <i class="fa fa-bars fa-2xl"></i>
+            </span>
             <ul>
               <li>
                 <a href="#">خانه</a>
@@ -46,6 +54,22 @@
               </svg>
             </a>
           </div>
+          <aside class="asd">
+            <ul>
+              <li>
+                <a href="#">خانه</a>
+              </li>
+              <li>
+                <a href="#">لپ تاپ</a>
+              </li>
+              <li>
+                <a href="#">در باره ما</a>
+              </li>
+              <li>
+                <a href="#">تماس با ما</a>
+              </li>
+            </ul>
+          </aside>
         </div>
       </nav>
       <div class="dark-header">
@@ -60,7 +84,7 @@
         </div>
       </div>
     </header>
-
+    <!-- main -->
     <main class="main">
       <section class="products">
         <div class="products__header">
@@ -249,10 +273,10 @@
 
       <section class="content-two">
         <div class="image-box">
-          <img src="images/pac1.jpg" alt="image" />
-          <img src="images/pac2.jpg" alt="image" />
-          <img src="images/pac3.jpg" alt="image" />
-          <img src="images/pac4.png" alt="image" />
+          <img class="mac" src="images/pac1.jpg" alt="image" />
+          <img class="asus" src="images/pac2.jpg" alt="image" />
+          <img class="hP" src="images/pac3.jpg" alt="image" />
+          <img class="dell" src="images/pac4.png" alt="image" />
         </div>
         <div class="text-box">
           <h3>کیفیتی که می‌توانی به آن اعتماد کنی</h3>
@@ -297,9 +321,13 @@
         </div>
       </section>
     </main>
-
+    <!-- footer -->
     <footer class="footer">
-      <img src="images/footer-bg.png" alt="footer image" />
+      <img
+        class="footer__image"
+        src="images/footer-bg.png"
+        alt="footer image"
+      />
       <div class="contenar footer__contenar">
         <div class="footer__box1">
           <h3>عضویت در خبرنامه</h3>

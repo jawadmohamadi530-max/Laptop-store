@@ -26,6 +26,9 @@
   /* رنگ نوار Navbar */
   --navbar-bg: rgba(15, 23, 42, 0.6);
 
+  /* رنگ asid */
+  --asd-bg: rgb(18, 27, 49);
+
   /* بوردر کارت محصول */
   --border: #334155;
 
@@ -142,6 +145,7 @@ body {
 .contenar {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 4px;
 }
 
 /* header */
@@ -163,9 +167,13 @@ body {
       height: 100%;
       .nav-text {
         width: 80%;
-        height: 100;
         display: flex;
         align-items: center;
+        .bars-icon {
+          color: var(--accent);
+          margin-right: 2rem;
+          cursor: pointer;
+        }
         ul {
           display: flex;
           li {
@@ -270,7 +278,7 @@ body {
 .products__items {
   display: grid;
   grid-template-columns: repeat(4, 250px);
-  grid-template-rows: repeat(4, 360px);
+  /* grid-template-rows: repeat(4, 360px); */
   justify-content: center;
   grid-gap: 10px;
 }
@@ -278,6 +286,7 @@ body {
 .items {
   background-color: var(--card-bg);
   border-radius: 0.5rem;
+  height: 335px;
   border: 1px solid var(--border);
   overflow: hidden;
   transition: all 500ms ease 250ms;
@@ -363,7 +372,7 @@ body {
     }
   }
   .text-box {
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto;
     text-align: center;
     h3 {
@@ -464,7 +473,7 @@ body {
   background-color: var(--footer-bg);
   position: relative;
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   img {
     width: 100%;
     height: 100%;
@@ -474,10 +483,10 @@ body {
     left: 0;
     right: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     .footer__box1 {
-      width: 320px;
+      max-width: 320px;
       h3 {
         color: var(--text-main);
         margin-top: 4rem;
@@ -538,7 +547,7 @@ body {
       }
     }
     .footer__box2 {
-      margin-right: 2rem;
+      /* margin-right: 2rem; */
       h3 {
         color: var(--text-main);
         margin-top: 4rem;
@@ -561,7 +570,7 @@ body {
       }
     }
     .footer__box3 {
-      margin-right: 2rem;
+      /* margin-right: 2rem; */
       h3 {
         color: var(--text-main);
         margin-top: 4rem;
@@ -584,7 +593,7 @@ body {
       }
     }
     .footer__box4 {
-      margin-right: 2rem;
+      /* margin-right: 2rem; */
       img {
         height: 3rem;
         width: 15rem;
@@ -600,6 +609,7 @@ body {
       }
       .boxes {
         display: flex;
+        flex-wrap: wrap;
         /* background-color: #7a878c; */
         .boxes__box {
           width: 9rem;
@@ -618,3 +628,88 @@ body {
 }
 
 /* media */
+
+@media only screen and (max-width: 1140px) {
+  .footer {
+    .footer__image {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .main {
+    .products__items {
+      grid-template-columns: repeat(2, 250px);
+    }
+    .brands__items__box {
+      grid-template-columns: repeat(2, 250px);
+    }
+  }
+}
+
+@media only screen and (min-width: 552px) {
+  .bars-icon {
+    display: none;
+  }
+  .asd {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 552px) {
+  .header .nav .nav__contenar .nav-text ul {
+    display: none;
+  }
+  .bars-icon {
+    display: block;
+  }
+  .asd {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--asd-bg);
+    transform: translateX(-200px);
+    transition: all 500ms ease-in 250ma;
+  }
+  .asd ul li a {
+    color: var(--accent);
+    display: block;
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 535px) {
+  .content-two {
+    .image-box {
+      .mac {
+        height: 100%;
+        width: 100%;
+      }
+      .asus {
+        display: none;
+      }
+      .hP {
+        display: none;
+      }
+      .dell {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .main {
+    .products__items {
+      grid-template-columns: repeat(1, 250px);
+    }
+    .brands__items__box {
+      grid-template-columns: repeat(1, 250px);
+    }
+  }
+}
