@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "shabnam";
+  src: url(../font/Shabnam-Medium.ttf) "sabnam";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+:root {
+  /* =========================
+     رنگ‌های اصلی سایت
+     ========================= */
+
+  /* بکراند اصلی کل سایت */
+  --bg-main: #0b1120;
+
+  /* بوردر کارت محصول */
+  --border: #334155;
+
+  /* =========================
+     متن‌ها
+     ========================= */
+
+  /* متن اصلی */
+  --text-main: #f8fafc;
+
+  /* متن فرعی */
+  --text-secondary: #94a3b8;
+
+  /* =========================
+     Input
+     ========================= */
+
+  /* رنگ پس‌زمینه Input */
+  --input-bg: #111827;
+
+  /* رنگ متن داخل Input */
+  --input-text: #e5e7eb;
+
+  /* رنگ Border Input */
+  --input-border: #334155;
+
+  /* =========================
+     Shadow
+     ========================= */
+
+  /* سایه کارت‌ها و عناصر */
+  --shadow: rgba(0, 0, 0, 0.35);
+
+  /* =========================
+     دکمه‌ها
+     ========================= */
+
+  /* رنگ اصلی دکمه */
+  --button: #2563eb;
+
+  /* رنگ دکمه هنگام Hover */
+  --button-hover: #3b82f6;
+
+}
+
+body {
+  font-family: "shabnam";
+  background-color: var(--bg-main);
+  overflow-x: hidden;
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/login/bg-login.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .login-box {
+    max-width: 380px;
+    /* height: 100px; */
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+    /* background-color: #fff  ; */
+    h1 {
+      color: var(--text-main);
+      text-align: center;
+    }
+    form {
+      .input {
+        width: 100%;
+        height: 50px;
+        outline: none;
+        border: none;
+        margin-top: 2rem;
+        border-radius: 0.5rem;
+        padding-right: 1rem;
+        background-color: var(--input-bg);
+        border: 1px solid var(--input-border);
+        color: var(--input-text);
+      }
+      .btn {
+        border: none;
+        background-color: var(--button);
+        color: var(--text-secondary);
+        width: 100%;
+        height: 50px;
+        margin: 2rem 0;
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        transition: all 250ms ease 250ms;
+        &:hover {
+          background-color: var(--button-hover);
+        }
+      }
+    }
+  }
+}
